@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Light AI Chatbot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+    }
+    #chatbox {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .message {
+      margin: 10px 0;
+    }
+    .user { text-align: right; color: #333; }
+    .bot { text-align: left; color: #007bff; }
+    input {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="chatbox">
+  <div id="messages"></div>
+  <input id="input" type="text" placeholder="Type a message..." onkeydown="if(event.key==='Enter') sendMessage()"/>
+</div>
+
+<script>
+  const responses = {
+    "hi": "Hello! How can I help you?",
+    "how are you": "I'm just a bunch of code, but I'm doing great!",
+    "what's your name": "I'm your lightweight AI bot.",
+    "bye": "Goodbye! See you later.",
+    "default": "Sorry, I don't understand that yet."
+  };
+
+  function sendMessage() {
+    const inputBox = document.getElementById("input");
+    const userInput = inputBox.value.trim().toLowerCase();
+    if (!userInput) return;
+
+    addMessage("user", userInput);
+    inputBox.value = "";
+
+    const reply = responses[userInput] || responses["default"];
+    setTimeout(() => addMessage("bot", reply), 500);
+  }
+
+  function addMessage(sender, text) {
+    const messages = document.getElementById("messages");
+    const msg = document.createElement("div");
+    msg.className = `message ${sender}`;
+    msg.textContent = text;
+    messages.appendChild(msg);
+    messages.scrollTop = messages.scrollHeight;
+  }
+</script>
+
+</body>
+</html>
