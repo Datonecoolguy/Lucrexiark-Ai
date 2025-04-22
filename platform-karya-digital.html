@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Platform Karya Digital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f0;
+      color: #333;
+    }
+    header {
+      background: #1a1a1a;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+    }
+    section {
+      padding: 2rem;
+      border-bottom: 1px solid #ddd;
+    }
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      margin-bottom: 1rem;
+    }
+    label {
+      display: block;
+      margin: 0.5rem 0 0.2rem;
+      font-weight: 600;
+    }
+    input, textarea, select, button {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-family: 'Inter', sans-serif;
+    }
+    button {
+      background: #1a1a1a;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+    .dual-column {
+      display: flex;
+      gap: 2rem;
+    }
+    .column {
+      flex: 1;
+    }
+    .gallery-item {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Platform Karya Digital</h1>
+</header>
+
+<section id="auth">
+  <h2>Login / Registrasi</h2>
+  <div class="dual-column">
+    <div class="column">
+      <h3>Login</h3>
+      <label>Email</label>
+      <input type="email" placeholder="you@example.com" />
+      <label>Password</label>
+      <input type="password" placeholder="••••••••" />
+      <button>Masuk</button>
+    </div>
+    <div class="column">
+      <h3>Registrasi</h3>
+      <label>Nama</label>
+      <input type="text" placeholder="Nama lengkap" />
+      <label>Email</label>
+      <input type="email" placeholder="you@example.com" />
+      <label>Password</label>
+      <input type="password" placeholder="••••••••" />
+      <button>Daftar</button>
+    </div>
+  </div>
+</section>
+
+<section id="upload">
+  <h2>Upload Karya</h2>
+  <label>Judul Karya</label>
+  <input type="text" placeholder="Masukkan judul karya" />
+  <label>Deskripsi</label>
+  <textarea rows="4" placeholder="Deskripsikan karya Anda..."></textarea>
+  <label>Upload File</label>
+  <input type="file" />
+  <label>Pilih Lisensi</label>
+  <select>
+    <option>No AI Use</option>
+    <option>Non-Komersial</option>
+    <option>Personal Use Only</option>
+    <option>Open License</option>
+  </select>
+  <button>Upload & Generate Hash</button>
+</section>
+
+<section id="dashboard">
+  <h2>Dashboard Pengguna</h2>
+  <div class="gallery-item">
+    <strong>Judul:</strong> Karya Contoh<br>
+    <strong>Status:</strong> Teregistrasi<br>
+    <button>Lihat Sertifikat</button>
+    <button>Hapus</button>
+  </div>
+</section>
+
+<section id="certificate">
+  <h2>Sertifikat Kepemilikan</h2>
+  <p><strong>Nama:</strong> [Nama Pengguna]</p>
+  <p><strong>Judul:</strong> [Judul Karya]</p>
+  <p><strong>Timestamp:</strong> [2025-04-22 12:00:00]</p>
+  <p><strong>Hash SHA256:</strong> abc123xyz456def789</p>
+</section>
+
+<section id="gallery">
+  <h2>Galeri Karya</h2>
+  <div class="gallery-item">
+    <strong>Judul:</strong> Karya Public 1<br>
+    <p>Deskripsi singkat karya.</p>
+  </div>
+  <div class="gallery-item">
+    <strong>Judul:</strong> Karya Public 2<br>
+    <p>Deskripsi singkat karya.</p>
+  </div>
+</section>
+
+<section id="terms">
+  <h2>Terms of Service & Privacy Policy</h2>
+  <p>Dengan menggunakan layanan ini, Anda menyetujui syarat & ketentuan yang berlaku...</p>
+</section>
+
+</body>
+</html>
